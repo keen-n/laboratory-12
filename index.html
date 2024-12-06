@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вивчення мови</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="difficulty-container">
+        <p>Рівень складності:</p>
+        <label>
+          <input type="radio" name="difficulty" value="easy" checked />
+          Початковий
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="medium" /> Середній
+        </label>
+        <label>
+          <input type="radio" name="difficulty" value="hard" /> Високий
+        </label>
+      </div>
+      <div class="card" id="word-card">Слово</div>
+      <div class="controls">
+        <input
+          type="text"
+          id="translation-input"
+          placeholder="Введіть переклад"
+        />
+        <button id="check-button">Перевірити</button>
+      </div>
+      <div class="stats">
+        <p>
+          Крок: <span id="current-step">1</span>/<span id="total-steps"
+            >10</span
+          >
+        </p>
+        <p>Правильно: <span id="correct-count">0</span></p>
+        <p>Неправильно: <span id="incorrect-count">0</span></p>
+      </div>
+    </div>
+
+    <div class="modal" id="result-modal">
+      <div class="modal-content">
+        <p id="result-text"></p>
+        <button id="restart-button">Почати знову</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
